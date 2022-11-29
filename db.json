@@ -1,0 +1,34 @@
+{
+  "artist": [
+    {
+      "id": "1",
+      "name": "Anthony Kiedis",
+      "type": "Vocalista",
+      "idBand": "1"
+    },
+    {
+      "id": "2",
+      "name": "Chester Bennington",
+      "type": "Vocalista",
+      "idBand": "2"
+    },
+    {
+      "id": "3",
+      "name": "Flea",
+      "type": "Baixista ",
+      "idBand": "1"
+    }
+  ],
+  "band": [
+    {
+      "id": "1",
+      "name": "Red Hot",
+      "stillWorking": true
+    },
+    {
+      "id": "2",
+      "name": "Linkin Park",
+      "stillWorking": false
+    }
+  ]
+}
