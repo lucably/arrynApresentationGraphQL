@@ -1,4 +1,5 @@
 import { RESTDataSource } from "apollo-datasource-rest";
+import { ValidationError } from "apollo-server";
 
 export class ArtistApi extends RESTDataSource {
   constructor() {
@@ -16,5 +17,20 @@ export class ArtistApi extends RESTDataSource {
 
   async createArtist(artistData) {
     return this.post("", artistData);
+  }
+
+  async deleteArtist(id) {
+    if (!id) throw new ValidationError(`User ${id} does not exist`);
+
+    const deleted = await this.delete(id);
+    return !!deleted;
+  }
+
+  async updateArtist(id, artistData) {
+    if (!id) {
+      throw new ValidationError("Missing Id");
+    }
+
+    return await this.patch(`/${id}`, { ...artistData });
   }
 }

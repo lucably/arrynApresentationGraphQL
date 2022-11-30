@@ -19,7 +19,6 @@ const artist = async (parent, { id }) => {
 */
 
 const artists = async (parent, arg, { dataSources }) => {
-  console.log(dataSources.ArtistApi.getArtists());
   const artists = dataSources.ArtistApi.getArtists();
   return artists;
 };
@@ -33,6 +32,16 @@ const createArtist = async (_, { data }, { dataSources }) => {
   return dataSources.ArtistApi.createArtist(data);
 };
 
+const deleteArtist = async (_, { id }, { dataSources }) => {
+  const deletedartist = dataSources.ArtistApi.deleteArtist(id);
+  return deletedartist;
+};
+
+const updateArtist = async (_, { id, data }, { dataSources }) => {
+  const editedArtist = dataSources.ArtistApi.updateArtist(id, data);
+  return editedArtist;
+};
+
 export const artistResolvers = {
   Query: {
     artist,
@@ -40,5 +49,7 @@ export const artistResolvers = {
   },
   Mutation: {
     createArtist,
+    deleteArtist,
+    updateArtist,
   },
 };
