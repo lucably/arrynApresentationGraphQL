@@ -6,8 +6,18 @@ export const artistTypeDefs = gql`
     artists: [Artist!]!
   }
 
+  extend type Mutation {
+    createArtist(data: CreateArtistInput!): Artist!
+  }
+
   type Artist {
     id: ID!
+    name: String!
+    type: String!
+    idBand: String!
+  }
+
+  input CreateArtistInput {
     name: String!
     type: String!
     idBand: String!

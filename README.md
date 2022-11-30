@@ -13,3 +13,5 @@
 7. Criar o script "dev": "nodemon src/index.js" e alterar no "main" com src
 
 8. Importar todos os arquivos com o caminho .js
+
+9. npm i apollo-datasource-rest => Data Sources => utilizado para fazer o REST api. E usa para fazer os cash evitando chamadas duplas.

@@ -17,6 +17,12 @@
       "name": "Flea",
       "type": "Baixista ",
       "idBand": "1"
+    },
+    {
+      "name": "Chad",
+      "type": "Baterist",
+      "idBand": "1",
+      "id": "ibGiNs_"
     }
   ],
   "band": [
